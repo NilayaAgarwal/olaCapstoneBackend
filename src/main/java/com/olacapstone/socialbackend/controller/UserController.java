@@ -60,6 +60,7 @@ public class UserController {
     }
 
     @PostMapping("/users/getfollowing")
+    @CrossOrigin(origins = "*")
     public ResponseEntity<ResponseObjectService> findFollowing(@RequestBody IdObjectEntity inputId) {
         return new ResponseEntity<ResponseObjectService>(userService.findFollowing(inputId.getId()), HttpStatus.OK);
     }

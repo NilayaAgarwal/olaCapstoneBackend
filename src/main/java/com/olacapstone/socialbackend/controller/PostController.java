@@ -34,6 +34,7 @@ public class PostController {
     }
 
     @PostMapping("/followingposts")
+    @CrossOrigin(origins = "*")
     public ResponseEntity<ResponseObjectService> findPostByFollowing(@RequestBody IdObjectEntity inputUserId) {
         return new ResponseEntity<ResponseObjectService>(postService.findPostByFollowing(inputUserId), HttpStatus.OK);
     }
