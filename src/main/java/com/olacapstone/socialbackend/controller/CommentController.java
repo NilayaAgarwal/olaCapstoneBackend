@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 @RestController
 @RequestMapping("/api/v1")
-@CrossOrigin(origins = "*", allowedHeaders = "*",allowCredentials = "true")
+@CrossOrigin(origins = "*")
 public class CommentController {
     @Autowired
     private CommentService commentService;
